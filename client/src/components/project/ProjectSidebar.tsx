@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 import styled, { color } from "../../config/styles";
-import { Modal, Title, Sidebar } from "../common";
+import { Modal, Heading, Sidebar } from "../common";
 import { Project } from "./project.model";
 import CreateProjectForm from "./CreateProjectForm";
 import { useProjectsQuery } from "./project.requests";
@@ -20,7 +20,7 @@ const ProjectSidebar: React.FC = () => {
 
   return (
     <Sidebar>
-      <ProjectListTitle>{t("project.listTitle")}</ProjectListTitle>
+      <ProjectListHeading>{t("project.listHeading")}</ProjectListHeading>
 
       <ProjectList>
         {data.projects.map((project: Project) => (
@@ -63,7 +63,7 @@ const ProjectSidebar: React.FC = () => {
   );
 };
 
-const ProjectListTitle = styled(Title.H2)``;
+const ProjectListHeading = styled(Heading.H2)``;
 
 const ProjectList = styled.ul`
   list-style: none;

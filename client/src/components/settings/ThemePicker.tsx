@@ -2,7 +2,7 @@ import React from "react";
 import { css } from "@emotion/core";
 import { useTranslation } from "react-i18next";
 
-import { Title } from "../common";
+import { Heading } from "../common";
 import { ReactComponent as LogoSVG } from "../../assets/logo.svg";
 import styled, { color } from "../../config/styles";
 import { useTheme, ThemeId } from "../../utils/ThemeProvider";
@@ -32,7 +32,7 @@ const ThemePicker: React.FC = () => {
                 data-testid={`selectthemebutton-${themeId}`}
               >
                 <Logo theme={theme} />
-                <ThemeTitle theme={theme}>{theme.name}</ThemeTitle>
+                <ThemeHeading theme={theme}>{theme.name}</ThemeHeading>
               </ThemeSelectButton>
             </ThemeSelectButtonWrapper>
           );
@@ -89,7 +89,7 @@ const Logo = styled(LogoSVG)`
   margin-right: 1rem;
 `;
 
-const ThemeTitle = styled(Title.H3)`
+const ThemeHeading = styled(Heading.H3)`
   margin-bottom: 0;
 `;
 

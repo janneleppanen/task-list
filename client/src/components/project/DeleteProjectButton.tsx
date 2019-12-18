@@ -19,7 +19,7 @@ const DeleteProjectButton: React.FC<DeleteProjectButtonProps> = props => {
 
   return (
     <Confirm
-      title={t("project.delete.areYouSure")}
+      heading={t("project.delete.areYouSure")}
       confirmButtonText={t("project.delete.submit")}
       cancelButtonText={t("project.delete.cancel")}
     >

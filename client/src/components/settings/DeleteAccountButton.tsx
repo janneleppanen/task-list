@@ -13,7 +13,7 @@ const DeleteAccountButton = () => {
   return (
     <div>
       <Confirm
-        title={t("account.delete.areYouSure")}
+        heading={t("account.delete.areYouSure")}
         confirmButtonText={t("account.delete.submit")}
         cancelButtonText={t("account.delete.cancel")}
       >

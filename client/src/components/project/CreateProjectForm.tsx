@@ -3,7 +3,7 @@ import { useHistory } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 import { useCreateProjectMutation } from "./project.requests";
-import { Title, Button, Input } from "../common";
+import { Heading, Button, Input } from "../common";
 import styled from "../../config/styles";
 
 interface Props {
@@ -30,7 +30,7 @@ const CreateProjectForm: React.FC<Props> = ({ onSubmit }) => {
 
   return (
     <Form onSubmit={createNewProject}>
-      <Title.H2>{t("project.newModal.title")}</Title.H2>
+      <Heading.H2>{t("project.newModal.heading")}</Heading.H2>
 
       <Input
         data-testid="new-project-input"

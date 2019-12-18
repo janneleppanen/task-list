@@ -11,7 +11,7 @@ const PageNotFoundPage: React.FC = () => {
   return (
     <Container data-testid="page-404">
       <Center>
-        <Heading>{t("notFound.title")}</Heading>
+        <Heading>{t("notFound.heading")}</Heading>
         <Illustration />
         <HomeLink to="/">{t("notFound.button")}</HomeLink>
       </Center>

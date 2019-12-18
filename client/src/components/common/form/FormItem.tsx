@@ -12,7 +12,7 @@ const FormItem: React.FC<Props> = props => {
     <Wrapper>
       {props.label ? (
         <Label>
-          <LabelTitle>{props.label}</LabelTitle> {props.children}
+          <LabelText>{props.label}</LabelText> {props.children}
         </Label>
       ) : (
         props.children
@@ -29,7 +29,7 @@ const Label = styled.label`
   display: block;
 `;
 
-const LabelTitle = styled.span`
+const LabelText = styled.span`
   display: block;
 `;
 

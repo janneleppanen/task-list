@@ -60,7 +60,7 @@ const RegistrationPage = () => {
     <LoginBox>
       <Logo hasName centered />
 
-      <Text centered>{t("registration.title")}</Text>
+      <Text centered>{t("registration.heading")}</Text>
 
       <br />
 

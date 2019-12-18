@@ -35,7 +35,7 @@
     }
   },
   "registration": {
-    "title": "Create a brand new account",
+    "heading": "Create a brand new account",
     "iAccept": "I accept",
     "termsLinkLabel": "the terms",
     "signIn": "Sign in",
@@ -43,10 +43,10 @@
     "logInLinkLabel": "log in"
   },
   "project": {
-    "listTitle": "Projects",
+    "listHeading": "Projects",
     "newButton": "Add project",
     "newModal": {
-      "title": "What's your project called?",
+      "heading": "What's your project called?",
       "name": "Name",
       "submit": "Add project",
       "placeholder": "Shopping list"
@@ -64,7 +64,7 @@
     "startText": "Start by adding your first task"
   },
   "settings": {
-    "title": "Settings",
+    "heading": "Settings",
     "theme": "Theme",
     "currentTheme": "Currently using theme \"{{theme}}\".",
     "language": "Language",
@@ -76,7 +76,7 @@
   },
   "account": {
     "delete": {
-      "title": "Delete your account",
+      "heading": "Delete your account",
       "disclaimer": "Deleting your account is permanent. All your data will be deleted immediately and you won't be able to get it back.",
       "button": "Delete your account",
       "areYouSure": "Do you want to delete your account?",
@@ -85,7 +85,7 @@
     }
   },
   "notFound": {
-    "title": "404 - Page not found",
+    "heading": "404 - Page not found",
     "button": "Go home"
   }
 }

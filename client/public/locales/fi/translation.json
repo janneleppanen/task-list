@@ -35,7 +35,7 @@
     }
   },
   "registration": {
-    "title": "Luo uusi tili",
+    "heading": "Luo uusi tili",
     "iAccept": "Hyväksyn",
     "termsLinkLabel": "käyttöehdot",
     "signIn": "Rekisteröidy",
@@ -43,10 +43,10 @@
     "logInLinkLabel": "kirjaudu"
   },
   "project": {
-    "listTitle": "Projektit",
+    "listHeading": "Projektit",
     "newButton": "Lisää projekti",
     "newModal": {
-      "title": "Luo uusi projekti",
+      "heading": "Luo uusi projekti",
       "name": "Nimi",
       "submit": "Lisää",
       "placeholder": "Kauppalista"
@@ -64,7 +64,7 @@
     "startText": "Aloita lisäämällä ensimmäinen tehtäväsi"
   },
   "settings": {
-    "title": "Asetukset",
+    "heading": "Asetukset",
     "theme": "Teema",
     "currentTheme": "Tällä hetkellä teemana \"{{theme}}\".",
     "language": "Kieli",
@@ -76,7 +76,7 @@
   },
   "account": {
     "delete": {
-      "title": "Poista tilisi",
+      "heading": "Poista tilisi",
       "disclaimer": "Tilin poistaminen on pysyvää. Kaikki tietosi postetaan välittömästi eikä niitä voida palauttaa.",
       "button": "Poista tilisi",
       "areYouSure": "Haluatko varmasti poistaa tilin?",
@@ -85,7 +85,7 @@
     }
   },
   "notFound": {
-    "title": "404 - Sivua ei löytynyt",
+    "heading": "404 - Sivua ei löytynyt",
     "button": "Palaa kotiin"
   }
 }

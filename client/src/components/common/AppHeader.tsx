@@ -49,7 +49,9 @@ const AppHeader: React.FC = props => {
               <SROnly>{t("common.menu")}</SROnly>
             </MenuToggle>
             <Menu show={showMenu}>
-              <MenuItemLink to="/settings">{t("settings.title")}</MenuItemLink>
+              <MenuItemLink to="/settings">
+                {t("settings.heading")}
+              </MenuItemLink>
               <MenuDivider />
               <MenuItemButton
                 data-testid="logout-button"

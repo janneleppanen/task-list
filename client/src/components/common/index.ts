@@ -4,7 +4,7 @@ export { default as Container } from "./Container";
 export { default as Button } from "./Button";
 export { default as Input } from "./Input";
 export { default as Modal } from "./Modal";
-export { default as Title } from "./Title";
+export { default as Heading } from "./Heading";
 export { default as Spinner } from "./Spinner";
 export { default as Logo } from "./Logo";
 export { default as Text } from "./Text";

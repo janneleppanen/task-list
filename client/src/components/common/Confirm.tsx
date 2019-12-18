@@ -5,14 +5,14 @@ import styled from "../../config/styles";
 
 interface Props {
   children: (callback: Function) => {};
-  title: string;
+  heading: string;
   confirmButtonText: string;
   cancelButtonText: string;
 }
 
 const Confirm = ({
   children,
-  title,
+  heading,
   confirmButtonText,
   cancelButtonText
 }: Props) => {
@@ -27,7 +27,7 @@ const Confirm = ({
           setModalIsOpen(false);
         }}
       >
-        <h2>{title}</h2>
+        <h2>{heading}</h2>
         <Actions>
           <Button
             filled
