@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { css } from "@emotion/core";
@@ -8,6 +8,7 @@ import { Container, SROnly } from "../common";
 import { ReactComponent as LogoSVG } from "../../assets/logo.svg";
 import { ReactComponent as ThreeDotsSVG } from "../../assets/three-dots.svg";
 import { useSideMenu } from "../../utils/SideMenuProvider";
+import useOnlineStatus from "../../utils/useOnlineStatus";
 import useLogOut from "../login/useLogOut";
 
 const AppHeader: React.FC = props => {
@@ -15,6 +16,7 @@ const AppHeader: React.FC = props => {
   const { t } = useTranslation();
   const [showMenu, setShowMenu] = useState(false);
   const { logOut } = useLogOut();
+  const isOnline = useOnlineStatus();
 
   return (
     <AppHeaderWrapper data-testid="app-header">
@@ -38,6 +40,8 @@ const AppHeader: React.FC = props => {
               </>
             )}
           </FirstItemContainer>
+
+          {!isOnline && <OfflineStatus>{t("common.offline")}</OfflineStatus>}
 
           <MenuContainer>
             <MenuToggle
@@ -182,6 +186,13 @@ const MenuDivider = styled.hr`
   margin: 0.5rem 0;
   border: none;
   border-top: 1px solid ${color("border")};
+`;
+
+const OfflineStatus = styled.span`
+  color: ${color("primary")};
+  flex: 1;
+  text-align: center;
+  margin: 0 1rem;
 `;
 
 export default AppHeader;
