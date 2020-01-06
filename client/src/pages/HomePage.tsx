@@ -5,7 +5,13 @@ import { AuthContext } from "../components/login";
 
 const HomePage: React.FC = () => {
   const { user } = useContext(AuthContext);
-  const to = user ? `project/${user.projects[0].id}` : "login";
+  let to = "login";
+
+  if (user) {
+    const firstProject =
+      user.projects.length > 0 ? user.projects[0].id : "no-projects";
+    to = `project/${firstProject}`;
+  }
 
   return <Redirect to={to} />;
 };
