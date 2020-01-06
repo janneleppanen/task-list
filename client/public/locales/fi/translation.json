@@ -10,7 +10,8 @@
     "namePlaceholder": "Matti Meikäläinen",
     "or": "tai",
     "menu": "valikko",
-    "cancel": "Peru"
+    "cancel": "Peru",
+    "offline": "Ei yhteyttä"
   },
   "error": {
     "Password should be at least 6 characters long!": "Salasanan tulee olla vähintään 6 merkkiä pitkä!",

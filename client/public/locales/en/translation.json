@@ -10,7 +10,8 @@
     "namePlaceholder": "John Doe",
     "or": "or",
     "menu": "menu",
-    "cancel": "Cancel"
+    "cancel": "Cancel",
+    "offline": "Offline"
   },
   "error": {
     "Password should be at least 6 characters long!": "Password should be at least 6 characters long!",
