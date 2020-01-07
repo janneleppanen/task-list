@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { DraggableProvidedDragHandleProps } from "react-beautiful-dnd/index";
+import { css } from "@emotion/core";
 
 import { ReactComponent as HandleIcon } from "../../assets/drag-handle-icon.svg";
 import { Task } from "./task.model";
@@ -12,6 +13,7 @@ export interface TaskListItemProps {
   onDoneToggle: (task: Task) => void;
   onDescriptionChange: (newDescription: string, task: Task) => void;
   dragHandleProps?: DraggableProvidedDragHandleProps | null;
+  isDragging?: boolean;
 }
 
 const TaskListItem: React.FC<TaskListItemProps> = ({
@@ -20,7 +22,8 @@ const TaskListItem: React.FC<TaskListItemProps> = ({
   onDelete,
   onDoneToggle,
   onDescriptionChange,
-  dragHandleProps
+  dragHandleProps,
+  isDragging
 }) => {
   const [newDescription, setNewDescription] = useState(task.description);
   const [isEditMode, setEditMode] = useState(false);
@@ -31,7 +34,7 @@ const TaskListItem: React.FC<TaskListItemProps> = ({
   };
 
   return (
-    <TaskRow>
+    <TaskRow isDragging={isDragging}>
       {dragHandleProps && (
         <DragHandle {...dragHandleProps} className="drag-handle">
           <HandleIcon />
@@ -216,9 +219,12 @@ const DeleteButton = styled.button`
   }
 `;
 
-const TaskRow = styled.div`
+const TaskRow = styled.div<{ isDragging?: boolean }>`
+  transition: all 0.2s;
+  box-shadow: none;
   position: relative;
   border-bottom: 1px solid ${color("border")};
+  border-radius: 0.25rem;
   padding: 0.75rem 0;
   display: flex;
   justify-content: space-between;
@@ -230,6 +236,15 @@ const TaskRow = styled.div`
       opacity: 1;
     }
   }
+  ${props =>
+    props.isDragging &&
+    css`
+      box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.2),
+        0 0 0 1px ${props.theme.colors.border};
+      background-color: ${props.theme.colors.border};
+      border-bottom-color: transparent;
+      padding: 0.75rem;
+    `}
 `;
 
 export default TaskListItem;

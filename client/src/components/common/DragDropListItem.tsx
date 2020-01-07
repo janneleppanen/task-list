@@ -1,8 +1,15 @@
 import React from "react";
-import { Draggable, DraggableProvided } from "react-beautiful-dnd";
+import {
+  Draggable,
+  DraggableProvided,
+  DraggableStateSnapshot
+} from "react-beautiful-dnd";
 
 interface Props {
-  children: (provided: DraggableProvided) => React.ReactElement;
+  children: (
+    provided: DraggableProvided,
+    snapshot: DraggableStateSnapshot
+  ) => React.ReactElement;
   itemId: string;
   index: number;
 }
@@ -10,9 +17,9 @@ interface Props {
 const DragDropListItem: React.FC<Props> = ({ children, itemId, index }) => {
   return (
     <Draggable draggableId={itemId} index={index}>
-      {provided => (
+      {(provided, snapshot) => (
         <div {...provided.draggableProps} ref={provided.innerRef}>
-          {children(provided)}
+          {children(provided, snapshot)}
         </div>
       )}
     </Draggable>
