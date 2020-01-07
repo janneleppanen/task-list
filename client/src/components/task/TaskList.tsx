@@ -52,7 +52,7 @@ const TaskList: React.FC<TaskListProps> = ({ project }) => {
     <DragDropList onReorder={reorderTasks}>
       {project.tasks.map((task, index) => (
         <DragDropListItem key={task.id} itemId={task.id} index={index}>
-          {provided => (
+          {(provided, snapshot) => (
             <TaskListItem
               index={index}
               task={task}
@@ -60,6 +60,7 @@ const TaskList: React.FC<TaskListProps> = ({ project }) => {
               onDoneToggle={toggleTaskDone}
               onDescriptionChange={updateDescription}
               dragHandleProps={provided.dragHandleProps}
+              isDragging={snapshot.isDragging}
             />
           )}
         </DragDropListItem>
