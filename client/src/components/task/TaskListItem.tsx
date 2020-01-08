@@ -105,6 +105,9 @@ const DragHandle = styled.div`
   svg {
     fill: currentColor;
   }
+  &:focus {
+    opacity: 1;
+  }
 
   ${mq("medium")} {
     opacity: 0;
