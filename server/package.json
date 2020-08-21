@@ -35,7 +35,7 @@
     "graphql-yoga": "^1.18.3",
     "jsonwebtoken": "^8.5.1",
     "knex": "^0.20.15",
-    "nodemon": "^1.19.4",
+    "nodemon": "^2.0.4",
     "pg": "^7.18.2"
   },
   "devDependencies": {
@@ -48,13 +48,13 @@
     "@babel/register": "^7.10.5",
     "@types/jest": "^24.9.1",
     "@types/node": "^12.12.54",
-    "babel-jest": "^24.9.0",
+    "babel-jest": "^26.3.0",
     "babel-plugin-dynamic-import-node": "^2.3.0",
     "babel-preset-env": "^1.7.0",
     "babel-register": "^6.26.0",
-    "jest": "^24.9.0",
+    "jest": "^26.4.1",
     "node-fetch": "^2.6.0",
-    "ts-jest": "^24.3.0",
+    "ts-jest": "^26.2.0",
     "ts-node": "^8.10.2",
     "typescript": "^3.9.7"
   }
