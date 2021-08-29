@@ -130,7 +130,10 @@ const Mutation = {
   },
 
   logOut(parent, args, ctx, info) {
-    ctx.res.clearCookie("token");
+    ctx.res.clearCookie("token", {
+      sameSite: "None",
+      secure: true
+    });
     return { message: "Goodbye!" };
   }
 };
