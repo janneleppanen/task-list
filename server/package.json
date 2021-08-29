@@ -57,5 +57,8 @@
     "ts-jest": "^26.2.0",
     "ts-node": "^8.10.2",
     "typescript": "^3.9.7"
+  },
+  "engines": {
+    "node": "14.x"
   }
 }

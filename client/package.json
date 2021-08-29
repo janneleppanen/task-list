@@ -60,5 +60,8 @@
     "@testing-library/react": "^9.3.2",
     "react-app-rewired": "^2.1.5",
     "waait": "^1.0.5"
+  },
+  "engines": {
+    "node": "14.x"
   }
 }
