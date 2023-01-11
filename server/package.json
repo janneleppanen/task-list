@@ -34,7 +34,7 @@
     "graphql": "^14.7.0",
     "graphql-yoga": "^1.18.3",
     "jsonwebtoken": "^8.5.1",
-    "knex": "^0.20.15",
+    "knex": "^2.4.0",
     "nodemon": "^2.0.4",
     "pg": "^7.18.2"
   },
